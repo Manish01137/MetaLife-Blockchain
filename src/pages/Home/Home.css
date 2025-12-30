@@ -1,0 +1,1213 @@
+.home {
+    width: 100%;
+  }
+  
+  /* HERO */
+  .hero {
+    padding: 140px 8% 120px;
+    text-align: center;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(47,128,255,0.1);
+    color: #2f80ff;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  
+  .hero h1 {
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.1;
+  }
+  
+  .hero h1 span {
+    background: linear-gradient(135deg, #2f80ff, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .hero p {
+    max-width: 720px;
+    margin: 24px auto 40px;
+    color: #64748b;
+    font-size: 18px;
+  }
+  
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* BUTTONS */
+  .btn {
+    padding: 14px 28px;
+    border-radius: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease;
+  }
+  
+  .btn.primary {
+    background: linear-gradient(135deg, #2f80ff, #00c6ff);
+    color: white;
+    border: none;
+  }
+  
+  .btn.primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(47,128,255,0.35);
+  }
+  
+  .btn.outline {
+    background: white;
+    border: 1px solid rgba(0,0,0,0.1);
+  }
+  
+  .btn.outline:hover {
+    background: rgba(47,128,255,0.08);
+  }
+  
+  /* SECTIONS */
+  section {
+    padding: 120px 8%;
+  }
+  
+  section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  /* RECOMMENDATIONS */
+  .recommend-box {
+    max-width: 900px;
+    margin: auto;
+    padding: 24px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+  }
+  
+  .recommend-cards {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
+  
+  .card {
+    padding: 32px;
+    border-radius: 24px;
+    background: white;
+    transition: transform .35s ease, box-shadow .35s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+  }
+  
+  .card span {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2f80ff;
+  }
+  
+  /* FEATURES */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 30px;
+  }
+  
+  .feature {
+    padding: 36px;
+    border-radius: 26px;
+    background: linear-gradient(
+      180deg,
+      rgba(255,255,255,0.9),
+      rgba(255,255,255,0.6)
+    );
+    backdrop-filter: blur(16px);
+    transition: transform .35s ease;
+  }
+  
+  .feature:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* STATS */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  
+  .stat {
+    padding: 36px;
+    border-radius: 24px;
+    background: white;
+    text-align: center;
+  }
+  
+  .stat strong {
+    font-size: 36px;
+    display: block;
+  }
+  
+  .stat span {
+    color: #64748b;
+  }
+  
+  /* PROGRESS */
+  .ico-progress {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .bar {
+    margin-top: 14px;
+    height: 10px;
+    background: rgba(0,0,0,0.08);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  
+  .bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(135deg, #2f80ff, #00c6ff);
+  }
+  
+  /* CTA */
+  .cta {
+    text-align: center;
+    background: linear-gradient(135deg, #2f80ff, #00c6ff);
+    color: white;
+  }
+  
+  .cta p {
+    max-width: 700px;
+    margin: 24px auto 40px;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .hero-actions {
+      flex-direction: column;
+    }
+  }
+  /* =========================
+   HERO SECTION – PREMIUM
+========================= */
+
+.hero {
+    padding: 160px 8% 140px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Soft background glow */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: -20%;
+    background:
+      radial-gradient(circle at 50% 20%, rgba(47,128,255,0.15), transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(0,198,255,0.12), transparent 45%);
+    z-index: -1;
+  }
+  
+  /* =========================
+     BADGE
+  ========================= */
+  
+  .badge {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: rgba(47,128,255,0.12);
+    color: #2f80ff;
+    font-weight: 600;
+    margin-bottom: 26px;
+    letter-spacing: 0.3px;
+  
+    /* Animation */
+    opacity: 0;
+    animation: fadeDown 0.9s ease forwards;
+  }
+  
+  /* =========================
+     HEADING
+  ========================= */
+  
+  .hero h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.08;
+    margin-bottom: 26px;
+  
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.2s;
+  }
+  
+  .hero h1 span {
+    background: linear-gradient(135deg, #2f80ff, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Slight 3D hover */
+  .hero h1:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* =========================
+     PARAGRAPH
+  ========================= */
+  
+  .hero p {
+    max-width: 720px;
+    margin: 0 auto 44px;
+    color: #64748b;
+    font-size: 18px;
+  
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.4s;
+  }
+  
+  /* =========================
+     ACTION BUTTONS
+  ========================= */
+  
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+  
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.6s;
+  }
+  
+  /* PRIMARY BUTTON */
+  .btn.primary {
+    background: linear-gradient(135deg, #2f80ff, #00c6ff);
+    color: white;
+    border: none;
+    padding: 16px 34px;
+    border-radius: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.35s ease;
+  }
+  
+  .btn.primary:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(47,128,255,0.45);
+  }
+  
+  /* OUTLINE BUTTON */
+  .btn.outline {
+    background: rgba(255,255,255,0.8);
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 16px 34px;
+    border-radius: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.35s ease;
+  }
+  
+  .btn.outline:hover {
+    transform: translateY(-4px);
+    background: rgba(47,128,255,0.08);
+    border-color: rgba(47,128,255,0.3);
+  }
+  
+  /* =========================
+     ANIMATIONS
+  ========================= */
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* =========================
+     MOBILE
+  ========================= */
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding: 120px 6% 100px;
+    }
+  
+    .hero-actions {
+      flex-direction: column;
+    }
+  }
+  /* =========================
+   HERO ACTIONS – PREMIUM
+========================= */
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+    perspective: 1000px; /* for subtle 3D */
+  }
+  
+  /* COMMON BUTTON BASE */
+  .hero-actions .btn {
+    position: relative;
+    padding: 16px 38px;
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 
+      transform 0.35s ease,
+      box-shadow 0.35s ease,
+      background 0.35s ease;
+    overflow: hidden;
+  }
+  
+  /* =========================
+     PRIMARY BUTTON
+  ========================= */
+  
+  .hero-actions .btn.primary {
+    background: linear-gradient(135deg, #2f80ff, #00c6ff);
+    color: white;
+    border: none;
+    box-shadow: 0 18px 40px rgba(47,128,255,0.35);
+  }
+  
+  /* Glow layer */
+  .hero-actions .btn.primary::before {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(
+      circle,
+      rgba(255,255,255,0.35),
+      transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  
+  /* Hover effect */
+  .hero-actions .btn.primary:hover {
+    transform: translateY(-8px) rotateX(8deg);
+    box-shadow: 0 30px 70px rgba(47,128,255,0.5);
+  }
+  
+  .hero-actions .btn.primary:hover::before {
+    opacity: 1;
+  }
+  
+  /* =========================
+     OUTLINE BUTTON
+  ========================= */
+  
+  .hero-actions .btn.outline {
+    background: rgba(255,255,255,0.9);
+    color: #0f172a;
+    border: 1px solid rgba(0,0,0,0.1);
+    backdrop-filter: blur(8px);
+  }
+  
+  /* Hover */
+  .hero-actions .btn.outline:hover {
+    transform: translateY(-6px);
+    background: rgba(47,128,255,0.08);
+    border-color: rgba(47,128,255,0.35);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+  }
+  
+  /* =========================
+     ACTIVE (CLICK) FEEDBACK
+  ========================= */
+  
+  .hero-actions .btn:active {
+    transform: translateY(-2px) scale(0.98);
+  }
+  
+  /* =========================
+     SUBTLE ENTRANCE ANIMATION
+  ========================= */
+  
+  .hero-actions {
+    opacity: 0;
+    animation: heroButtonsIn 0.9s ease forwards;
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes heroButtonsIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* =========================
+     MOBILE
+  ========================= */
+  
+  @media (max-width: 768px) {
+    .hero-actions {
+      flex-direction: column;
+      gap: 18px;
+    }
+  
+    .hero-actions .btn {
+      width: 100%;
+      max-width: 320px;
+      margin: auto;
+    }
+  }
+
+  /* =========================
+   HERO ACTIONS (VISIBLE)
+========================= */
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 10px;
+  }
+  
+  /* COMMON BUTTON */
+  .hero-actions .btn {
+    position: relative;
+    padding: 16px 40px;
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    letter-spacing: 0.3px;
+  }
+  
+  /* =========================
+     PRIMARY BUTTON (STRONG)
+  ========================= */
+  
+  .hero-actions .btn.primary {
+    background: linear-gradient(135deg, #2f80ff, #00c6ff);
+    color: #ffffff;
+    border: none;
+  
+    /* VISIBILITY */
+    box-shadow:
+      0 18px 40px rgba(47,128,255,0.45),
+      inset 0 0 0 1px rgba(255,255,255,0.25);
+  }
+  
+  /* Hover */
+  .hero-actions .btn.primary:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      0 28px 60px rgba(47,128,255,0.55),
+      inset 0 0 0 1px rgba(255,255,255,0.35);
+  }
+  
+  /* =========================
+     OUTLINE BUTTON (VISIBLE)
+  ========================= */
+  
+  .hero-actions .btn.outline {
+    background: #ffffff;
+    color: #0f172a;
+  
+    /* STRONG BORDER */
+    border: 2px solid rgba(47,128,255,0.35);
+  
+    box-shadow:
+      0 10px 24px rgba(0,0,0,0.12);
+  }
+  
+  /* Hover */
+  .hero-actions .btn.outline:hover {
+    transform: translateY(-4px);
+    background: rgba(47,128,255,0.08);
+    border-color: #2f80ff;
+    box-shadow: 0 18px 40px rgba(47,128,255,0.25);
+  }
+  
+  /* =========================
+     CLICK FEEDBACK
+  ========================= */
+  
+  .hero-actions .btn:active {
+    transform: translateY(-1px) scale(0.98);
+  }
+  
+  /* =========================
+     ENTRANCE ANIMATION
+  ========================= */
+  
+  .hero-actions {
+    opacity: 0;
+    animation: heroButtonsVisible 0.9s ease forwards;
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes heroButtonsVisible {
+    from {
+      opacity: 0;
+      transform: translateY(26px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* =========================
+     MOBILE
+  ========================= */
+  
+  @media (max-width: 768px) {
+    .hero-actions {
+      flex-direction: column;
+      gap: 18px;
+    }
+  
+    .hero-actions .btn {
+      width: 100%;
+      max-width: 320px;
+      margin: auto;
+    }
+  }
+  
+  .hero-actions .btn.primary {
+    background: linear-gradient(135deg, #5aa9ff, #7cc9ff);
+    color: #0f172a; /* BLACK TEXT */
+    border: none;
+  
+    box-shadow:
+      0 16px 36px rgba(90,169,255,0.45),
+      inset 0 0 0 1px rgba(255,255,255,0.3);
+  
+    font-weight: 700;
+  }
+  
+  /* Hover */
+  .hero-actions .btn.primary:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(135deg, #4b9bff, #6fc3ff);
+    box-shadow:
+      0 28px 60px rgba(90,169,255,0.6);
+  }
+  .hero-actions .btn.outline {
+    background: rgba(90,169,255,0.15);
+    color: #0f172a; /* BLACK TEXT */
+    border: 2px solid rgba(90,169,255,0.5);
+  
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    font-weight: 600;
+  }
+  
+  /* Hover */
+  .hero-actions .btn.outline:hover {
+    transform: translateY(-4px);
+    background: rgba(90,169,255,0.25);
+    border-color: #5aa9ff;
+    box-shadow: 0 18px 40px rgba(90,169,255,0.35);
+  }
+  /* =========================
+   RECOMMENDATIONS SECTION
+========================= */
+
+.recommendations {
+    padding: 120px 8%;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Title */
+  .recommendations h2 {
+    font-size: 36px;
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+  }
+  
+  /* =========================
+     RECOMMEND BOX (GLASS)
+  ========================= */
+  
+  .recommend-box {
+    max-width: 920px;
+    margin: 0 auto 70px;
+    padding: 28px 36px;
+    border-radius: 24px;
+  
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.12);
+  
+    font-size: 17px;
+    color: #334155;
+    line-height: 1.6;
+  
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.2s;
+  }
+  
+  /* =========================
+     CARDS GRID
+  ========================= */
+  
+  .recommend-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 34px;
+  }
+  
+  /* =========================
+     CARD BASE
+  ========================= */
+  
+  .recommend-cards .card {
+    position: relative;
+    padding: 34px;
+    border-radius: 28px;
+  
+    background: linear-gradient(
+      180deg,
+      rgba(255,255,255,0.95),
+      rgba(255,255,255,0.85)
+    );
+  
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+    transition: all 0.45s ease;
+  
+    transform-style: preserve-3d;
+    cursor: pointer;
+  
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+  }
+  
+  /* STAGGER EFFECT */
+  .recommend-cards .card:nth-child(1) { animation-delay: 0.3s; }
+  .recommend-cards .card:nth-child(2) { animation-delay: 0.45s; }
+  .recommend-cards .card:nth-child(3) { animation-delay: 0.6s; }
+  
+  /* =========================
+     CARD HOVER (PREMIUM)
+  ========================= */
+  
+  .recommend-cards .card:hover {
+    transform: translateY(-14px) rotateX(6deg) rotateY(-4deg);
+    box-shadow: 0 45px 90px rgba(0,0,0,0.18);
+  }
+  
+  /* Glow layer */
+  .recommend-cards .card::before {
+    content: "";
+    position: absolute;
+    inset: -30%;
+    background: radial-gradient(
+      circle,
+      rgba(47,128,255,0.18),
+      transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.45s ease;
+    pointer-events: none;
+  }
+  
+  .recommend-cards .card:hover::before {
+    opacity: 1;
+  }
+  
+  /* =========================
+     CARD CONTENT
+  ========================= */
+  
+  .recommend-cards .card h3 {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+  
+  .recommend-cards .card p {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.6;
+  }
+  
+  /* CTA LINK */
+  .recommend-cards .card span {
+    display: inline-block;
+    margin-top: 24px;
+    font-weight: 600;
+    color: #2f80ff;
+    transition: transform 0.35s ease;
+  }
+  
+  .recommend-cards .card:hover span {
+    transform: translateX(6px);
+  }
+  
+  /* =========================
+     ANIMATIONS
+  ========================= */
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* =========================
+     MOBILE
+  ========================= */
+  
+  @media (max-width: 768px) {
+    .recommend-box {
+      padding: 24px;
+    }
+  
+    .recommend-cards {
+      gap: 26px;
+    }
+  
+    .recommend-cards .card {
+      padding: 28px;
+    }
+  }
+  /* =========================
+   FEATURES SECTION
+========================= */
+
+.features {
+    padding: 120px 8%;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Section Title */
+  .features h2 {
+    font-size: 36px;
+    margin-bottom: 60px;
+    opacity: 0;
+    animation: featureFadeUp 1s ease forwards;
+  }
+  
+  /* =========================
+     GRID
+  ========================= */
+  
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 36px;
+    perspective: 1200px; /* enables 3D feel */
+  }
+  
+  /* =========================
+     FEATURE CARD
+  ========================= */
+  
+  .feature {
+    position: relative;
+    padding: 40px 36px;
+    border-radius: 28px;
+  
+    background: linear-gradient(
+      180deg,
+      rgba(255,255,255,0.95),
+      rgba(255,255,255,0.75)
+    );
+  
+    backdrop-filter: blur(18px);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.12);
+  
+    transition: 
+      transform 0.45s ease,
+      box-shadow 0.45s ease;
+  
+    opacity: 0;
+    animation: featureFadeUp 1s ease forwards;
+  }
+  
+  /* STAGGER FEEL */
+  .feature:nth-child(1) { animation-delay: 0.2s; }
+  .feature:nth-child(2) { animation-delay: 0.35s; }
+  .feature:nth-child(3) { animation-delay: 0.5s; }
+  
+  /* =========================
+     HOVER EFFECT (PREMIUM)
+  ========================= */
+  
+  .feature:hover {
+    transform: translateY(-16px) rotateX(6deg) rotateY(-4deg);
+    box-shadow: 0 45px 90px rgba(0,0,0,0.18);
+  }
+  
+  /* Glow layer */
+  .feature::before {
+    content: "";
+    position: absolute;
+    inset: -35%;
+    background: radial-gradient(
+      circle,
+      rgba(47,128,255,0.2),
+      transparent 65%
+    );
+    opacity: 0;
+    transition: opacity 0.45s ease;
+    pointer-events: none;
+  }
+  
+  .feature:hover::before {
+    opacity: 1;
+  }
+  
+  /* =========================
+     CONTENT
+  ========================= */
+  
+  .feature h3 {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+  
+  .feature p {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.6;
+  }
+  
+  /* =========================
+     ANIMATION
+  ========================= */
+  
+  @keyframes featureFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* =========================
+     MOBILE
+  ========================= */
+  
+  @media (max-width: 768px) {
+    .feature {
+      padding: 32px;
+    }
+  
+    .features h2 {
+      font-size: 30px;
+    }
+  }
+  /* =========================
+   CSS MOUSE-FOLLOW TILT
+========================= */
+
+.feature {
+    position: relative;
+    transform-style: preserve-3d;
+    transition:
+      transform 0.35s cubic-bezier(.22,.61,.36,1),
+      box-shadow 0.35s ease;
+  }
+  
+  /* DEPTH LAYER */
+  .feature::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      circle at top left,
+      rgba(255,255,255,0.45),
+      transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+  
+  /* HOVER BASE */
+  .feature:hover {
+    transform: translateY(-14px) scale(1.02);
+  }
+  
+  /* TOP-LEFT */
+  .feature:hover {
+    transform: translateY(-14px) rotateX(6deg) rotateY(-6deg);
+  }
+  
+  /* GLOW APPEAR */
+  .feature:hover::after {
+    opacity: 1;
+  }
+  
+  /* CONTENT DEPTH */
+  .feature h3,
+  .feature p {
+    transform: translateZ(25px);
+    transition: transform 0.35s ease;
+  }
+  
+  /* =========================
+     DIRECTIONAL ILLUSION
+  ========================= */
+  
+  /* When cursor is near left side */
+  .feature:hover {
+    box-shadow:
+      0 40px 90px rgba(0,0,0,0.18),
+      -10px 10px 30px rgba(47,128,255,0.18);
+  }
+  
+  /* =========================
+     SMOOTH RESET
+  ========================= */
+  
+  .feature:not(:hover) {
+    transform: translateY(0) rotateX(0) rotateY(0);
+  }
+  /* =========================
+   STATS SECTION
+========================= */
+
+.stats {
+    padding: 120px 8%;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Title */
+  .stats h2 {
+    font-size: 36px;
+    margin-bottom: 60px;
+    opacity: 0;
+    animation: statsFadeUp 1s ease forwards;
+  }
+  
+  /* =========================
+     GRID
+  ========================= */
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 36px;
+    margin-bottom: 60px;
+    perspective: 1200px;
+  }
+  
+  /* =========================
+     STAT CARD
+  ========================= */
+  
+  .stat {
+    position: relative;
+    padding: 40px 30px;
+    border-radius: 28px;
+  
+    background: linear-gradient(
+      180deg,
+      rgba(255,255,255,0.95),
+      rgba(255,255,255,0.8)
+    );
+  
+    backdrop-filter: blur(16px);
+    box-shadow: 0 22px 55px rgba(0,0,0,0.12);
+  
+    transition:
+      transform 0.45s ease,
+      box-shadow 0.45s ease;
+  
+    opacity: 0;
+    animation: statsFadeUp 1s ease forwards;
+  }
+  
+  /* Stagger illusion */
+  .stat:nth-child(1) { animation-delay: 0.2s; }
+  .stat:nth-child(2) { animation-delay: 0.35s; }
+  .stat:nth-child(3) { animation-delay: 0.5s; }
+  .stat:nth-child(4) { animation-delay: 0.65s; }
+  
+  /* =========================
+     HOVER EFFECT
+  ========================= */
+  
+  .stat:hover {
+    transform: translateY(-16px) rotateX(6deg);
+    box-shadow: 0 45px 90px rgba(0,0,0,0.18);
+  }
+  
+  /* Glow */
+  .stat::before {
+    content: "";
+    position: absolute;
+    inset: -35%;
+    background: radial-gradient(
+      circle,
+      rgba(47,128,255,0.2),
+      transparent 65%
+    );
+    opacity: 0;
+    transition: opacity 0.45s ease;
+    pointer-events: none;
+  }
+  
+  .stat:hover::before {
+    opacity: 1;
+  }
+  
+  /* =========================
+     CONTENT
+  ========================= */
+  
+  .stat strong {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #0f172a;
+  }
+  
+  .stat span {
+    font-size: 14px;
+    color: #64748b;
+    letter-spacing: 0.3px;
+  }
+  
+  /* =========================
+     PROGRESS BAR
+  ========================= */
+  
+  .ico-progress {
+    max-width: 820px;
+    margin: auto;
+    opacity: 0;
+    animation: statsFadeUp 1s ease forwards;
+    animation-delay: 0.8s;
+  }
+  
+  .ico-progress p {
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+  
+  /* Bar */
+  .bar {
+    height: 12px;
+    background: rgba(0,0,0,0.08);
+    border-radius: 999px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Filled bar */
+  .bar span {
+    display: block;
+    height: 100%;
+    width: 67%;
+    background: linear-gradient(135deg, #2f80ff, #00c6ff);
+    border-radius: inherit;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Shine animation */
+  .bar span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,0.5),
+      transparent
+    );
+    animation: barShine 2.5s infinite;
+  }
+  
+  /* =========================
+     ANIMATIONS
+  ========================= */
+  
+  @keyframes statsFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes barShine {
+    0% { left: -40%; }
+    100% { left: 120%; }
+  }
+  
+  /* =========================
+     MOBILE
+  ========================= */
+  
+  @media (max-width: 768px) {
+    .stat {
+      padding: 32px;
+    }
+  
+    .stats h2 {
+      font-size: 30px;
+    }
+  }
+  
