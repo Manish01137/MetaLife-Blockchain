@@ -4,10 +4,18 @@ import Footer from "./components/layout/Footer"
 
 // REAL PAGES
 import Home from "./pages/Home/Home"
+import About from "./pages/About/About"
 
-// TEMP PAGES (until you build them)
+// TEMP PAGE (until built)
 const Page = ({ title }) => (
-  <div style={{ padding: "140px 8%", fontSize: "36px" }}>
+  <div
+    style={{
+      padding: "160px 8% 120px",
+      fontSize: "42px",
+      fontWeight: "600",
+      color: "#0f172a",
+    }}
+  >
     {title}
   </div>
 )
@@ -18,11 +26,13 @@ function App() {
       <Navbar />
 
       <Routes>
-        {/* REAL HOME PAGE */}
+        {/* HOME */}
         <Route path="/" element={<Home />} />
 
-        {/* PLACEHOLDERS */}
-        <Route path="/about" element={<Page title="About" />} />
+        {/* ABOUT (REAL PAGE) */}
+        <Route path="/about" element={<About />} />
+
+        {/* TEMP ROUTES (WILL REPLACE ONE BY ONE) */}
         <Route path="/how-it-works" element={<Page title="How It Works" />} />
         <Route path="/ico" element={<Page title="ICO" />} />
         <Route path="/equity" element={<Page title="Equity Investment" />} />
