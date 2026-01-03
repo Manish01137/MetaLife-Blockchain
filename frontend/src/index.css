@@ -1,0 +1,53 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT VARIABLES */
+:root {
+  --primary: #2f80ff;
+  --secondary: #00c6ff;
+  --dark: #0f172a;
+  --gray: #6b7280;
+  --bg-light: #f8fbff;
+}
+
+/* BODY */
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont;
+  background-color: white;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* BUTTON RESET */
+button {
+  font-family: inherit;
+  outline: none;
+}
+
+/* SCROLLBAR (OPTIONAL PREMIUM FEEL) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    var(--primary),
+    var(--secondary)
+  );
+  border-radius: 10px;
+}

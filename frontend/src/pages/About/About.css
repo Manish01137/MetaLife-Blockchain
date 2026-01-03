@@ -1,0 +1,510 @@
+.about {
+    background: #f9fbff;
+    color: #0f172a;
+  }
+  
+  /* COMMON */
+  .eyebrow {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #3b82f6;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  
+  section {
+    padding: 120px 8%;
+  }
+  
+  /* HERO */
+  .about-hero {
+    background: linear-gradient(135deg, #0b1d3a, #163a6b);
+    color: #fff;
+    padding: 160px 8% 140px;
+    text-align: center;
+  }
+  
+  .about-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.2;
+  }
+  
+  .about-hero h1 span {
+    color: #4fc3ff;
+  }
+  
+  /* MISSION */
+  .mission {
+    text-align: center;
+  }
+  
+  .mission p {
+    max-width: 720px;
+    margin: 0 auto 60px;
+    color: #475569;
+  }
+  
+  .mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+  }
+  
+  .mission-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+    transition: all .4s ease;
+  }
+  
+  .mission-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 70px rgba(59,130,246,0.2);
+  }
+  
+  /* VALUES */
+  .values {
+    text-align: center;
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+  }
+  
+  .value {
+    padding: 20px;
+    transition: transform .4s ease;
+  }
+  
+  .value:hover {
+    transform: translateY(-8px);
+  }
+  
+  /* JOURNEY */
+  .journey {
+    text-align: center;
+  }
+  
+  .journey-line {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 40px;
+    margin-top: 70px;
+  }
+  
+  .journey-step {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+    transition: all .4s ease;
+  }
+  
+  .journey-step:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(59,130,246,0.25);
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    section {
+      padding: 80px 6%;
+    }
+  
+    .about-hero {
+      padding: 120px 6% 100px;
+    }
+  }
+/* ============================= */
+/* ABOUT HERO – PREMIUM VERSION */
+/* ============================= */
+
+.about-hero {
+    position: relative;
+    padding: 180px 8% 160px;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+    background: linear-gradient(
+      135deg,
+      #0b1d3a,
+      #122c55,
+      #163f78
+    );
+  }
+  
+  /* Animated gradient overlay */
+  .about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at 20% 30%,
+      rgba(79, 195, 255, 0.25),
+      transparent 50%
+    );
+    animation: glowMove 8s ease-in-out infinite alternate;
+    z-index: 0;
+  }
+  
+  @keyframes glowMove {
+    0% {
+      transform: translate(-10%, -10%);
+    }
+    100% {
+      transform: translate(10%, 10%);
+    }
+  }
+  
+  /* Eyebrow */
+  .about-hero .eyebrow {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    color: #7dd3fc;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+  }
+  
+  /* Heading */
+  .about-hero h1 {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    line-height: 1.15;
+    font-weight: 700;
+    max-width: 980px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeUp 1.2s ease forwards;
+    animation-delay: 0.2s;
+  }
+  
+  /* Gradient animated text */
+  .about-hero h1 span {
+    display: inline-block;
+    background: linear-gradient(
+      90deg,
+      #4fc3ff,
+      #60a5fa,
+      #38bdf8
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 4s linear infinite;
+  }
+  
+  /* Hover interaction */
+  .about-hero h1:hover span {
+    transform: translateY(-4px) scale(1.02);
+    text-shadow: 0 0 25px rgba(79, 195, 255, 0.6);
+  }
+  
+  /* Animations */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes gradientFlow {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-hero {
+      padding: 130px 6% 110px;
+    }
+  }
+    /* ============================= */
+/* HERO BASE */
+/* ============================= */
+.about-hero {
+  position: relative;
+  padding: 180px 8% 160px;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0b1d3a, #122c55, #163f78);
+}
+
+/* ============================= */
+/* TEXT */
+/* ============================= */
+.about-hero h1 {
+  font-size: clamp(2.6rem, 5vw, 4.3rem);
+  line-height: 1.15;
+  font-weight: 700;
+  color: #ffffff;
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero h1 span {
+  background: linear-gradient(90deg, #4fc3ff, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Letter spans */
+.char {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+/* Eyebrow */
+.eyebrow {
+  display: inline-block;
+  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #7dd3fc;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================= */
+/* PARTICLES */
+/* ============================= */
+.particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #4fc3ff, transparent);
+  top: 50%;
+  left: 50%;
+  filter: blur(1px);
+  opacity: 0.4;
+}
+
+/* Random placement */
+.particle:nth-child(odd) {
+  width: 8px;
+  height: 8px;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 130px 6% 110px;
+  }
+}
+/* ============================= */
+/* MISSION SECTION */
+/* ============================= */
+
+.mission {
+  padding: 140px 8%;
+  background: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft background glow */
+.mission::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 20%,
+    rgba(96, 165, 250, 0.12),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* Eyebrow */
+.mission .eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  color: #3b82f6;
+  margin-bottom: 18px;
+  opacity: 0;
+  animation: fadeDown 0.8s ease forwards;
+}
+
+/* Heading */
+.mission h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 16px;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.15s;
+}
+
+/* Description */
+.mission p {
+  max-width: 760px;
+  margin: 0 auto 70px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #475569;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* ============================= */
+/* GRID */
+/* ============================= */
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 34px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.mission-card {
+  position: relative;
+  padding: 36px 34px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 20px 40px rgba(15, 23, 42, 0.08),
+    inset 0 0 0 1px rgba(148, 163, 184, 0.25);
+  text-align: left;
+  transition: all 0.45s ease;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: cardReveal 1s ease forwards;
+}
+
+/* Stagger animation */
+.mission-card:nth-child(1) { animation-delay: 0.4s; }
+.mission-card:nth-child(2) { animation-delay: 0.55s; }
+.mission-card:nth-child(3) { animation-delay: 0.7s; }
+.mission-card:nth-child(4) { animation-delay: 0.85s; }
+
+/* Card title */
+.mission-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+/* Card text */
+.mission-card p {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.55;
+}
+
+/* ============================= */
+/* HOVER – PREMIUM EFFECT */
+/* ============================= */
+
+.mission-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(96, 165, 250, 0.35),
+    rgba(56, 189, 248, 0.15),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.mission-card:hover::before {
+  opacity: 1;
+}
+
+.mission-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow:
+    0 30px 60px rgba(59, 130, 246, 0.25),
+    inset 0 0 0 1px rgba(96, 165, 250, 0.5);
+}
+
+/* ============================= */
+/* ANIMATIONS */
+/* ============================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 900px) {
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission {
+    padding: 110px 6%;
+  }
+}
