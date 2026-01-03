@@ -299,7 +299,7 @@
 .particle {
   position: absolute;
   width: 6px;
-  height: 6px;
+  height: 7px;
   border-radius: 50%;
   background: radial-gradient(circle, #4fc3ff, transparent);
   top: 50%;
