@@ -1,54 +1,85 @@
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import "./About.css"
 
 gsap.registerPlugin(ScrollTrigger)
 
-const About = () => {
+const AboutHero = () => {
+  const heroRef = useRef(null)
+
   useEffect(() => {
-    gsap.utils.toArray(".reveal").forEach(el => {
-      gsap.fromTo(
-        el,
-        { opacity: 0, y: 60 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 85%",
-          },
-        }
-      )
+    /* ============================= */
+    /* LETTER BY LETTER REVEAL */
+    /* ============================= */
+    const text = heroRef.current.querySelector("h1")
+    const split = text.innerText.split("")
+    text.innerHTML = split.map(char =>
+      char === " " ? "&nbsp;" : `<span class="char">${char}</span>`
+    ).join("")
+
+    gsap.fromTo(
+      ".char",
+      { y: 60, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.02,
+        duration: 1,
+        ease: "power4.out"
+      }
+    )
+
+    /* ============================= */
+    /* SCROLL SCRUB PARALLAX */
+    /* ============================= */
+    gsap.to(text, {
+      y: -80,
+      scrollTrigger: {
+        trigger: heroRef.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: true
+      }
     })
 
-    gsap.from(".journey-step", {
-      opacity: 0,
-      y: 50,
-      stagger: 0.15,
-      duration: 1,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".journey",
-        start: "top 80%",
-      },
+    /* ============================= */
+    /* FLOATING PARTICLES */
+    /* ============================= */
+    gsap.utils.toArray(".particle").forEach(p => {
+      gsap.to(p, {
+        y: gsap.utils.random(-120, 120),
+        x: gsap.utils.random(-80, 80),
+        opacity: gsap.utils.random(0.2, 0.6),
+        duration: gsap.utils.random(6, 12),
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut"
+      })
     })
+
   }, [])
 
   return (
     <main className="about">
 
       {/* VISION */}
-      <section className="about-hero">
-        <span className="eyebrow">OUR VISION</span>
-        <h1>
-          Creating a future where people <br />
-          <span>fully control their digital lives</span> <br />
-          through AI and blockchain.
-        </h1>
-      </section>
+      <section className="about-hero" ref={heroRef}>
+      <span className="eyebrow">OUR VISION</span>
+
+      <h1>
+        Creating a future where people <br />
+        <span>fully control their digital lives</span> <br />
+        through AI and blockchain.
+      </h1>
+
+      {/* PARTICLES */}
+      <div className="particles">
+        {[...Array(14)].map((_, i) => (
+          <span key={i} className="particle" />
+        ))}
+      </div>
+    </section>
 
       {/* MISSION */}
       <section className="mission reveal">
@@ -160,4 +191,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutHero
