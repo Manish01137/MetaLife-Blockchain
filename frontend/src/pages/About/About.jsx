@@ -126,66 +126,94 @@ const AboutHero = () => {
       </section>
 
       {/* VALUES */}
-      <section className="values reveal">
-        <span className="eyebrow">OUR VALUES</span>
-        <h2>Principles That Guide Us</h2>
+      <section className="values-section">
+  <span className="eyebrow">OUR VALUES</span>
+  <h2 className="values-title">Principles That Guide Us</h2>
 
-        <div className="values-grid">
-          <div className="value">
-            <h4>Transparency</h4>
-            <p>Open and honest in all operations and decisions.</p>
-          </div>
-          <div className="value">
-            <h4>Innovation</h4>
-            <p>Pushing boundaries to create life-changing technology.</p>
-          </div>
-          <div className="value">
-            <h4>Excellence</h4>
-            <p>Committed to the highest quality in every detail.</p>
-          </div>
-          <div className="value">
-            <h4>Privacy</h4>
-            <p>Your data is yours. We protect, never exploit.</p>
-          </div>
-          <div className="value">
-            <h4>Empowerment</h4>
-            <p>Giving individuals control of their digital destiny.</p>
-          </div>
-        </div>
-      </section>
+  <div className="values-grid">
+    <div className="value-item">
+      <div className="value-icon">👁️</div>
+      <h3>Transparency</h3>
+      <p>
+        Open and honest in all our operations, from smart contracts to company
+        decisions.
+      </p>
+    </div>
+
+    <div className="value-item">
+      <div className="value-icon">💡</div>
+      <h3>Innovation</h3>
+      <p>
+        Constantly pushing boundaries to create technology that transforms lives.
+      </p>
+    </div>
+
+    <div className="value-item">
+      <div className="value-icon">🏅</div>
+      <h3>Excellence</h3>
+      <p>
+        Committed to delivering the highest quality in every aspect of our platform.
+      </p>
+    </div>
+
+    <div className="value-item">
+      <div className="value-icon">🔒</div>
+      <h3>Privacy</h3>
+      <p>
+        Your data is yours. We build systems that protect, not exploit.
+      </p>
+    </div>
+
+    <div className="value-item">
+      <div className="value-icon">👥</div>
+      <h3>Empowerment</h3>
+      <p>
+        Giving individuals the tools to control their digital destiny.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* USER JOURNEY */}
       <section className="journey">
-        <span className="eyebrow">USER JOURNEY</span>
-        <h2>Your Path to Digital Empowerment</h2>
+  <span className="eyebrow">USER JOURNEY</span>
+  <h2>Your Path to Digital Empowerment</h2>
 
-        <div className="journey-line">
-          <div className="journey-step">
-            <h4>Sign Up</h4>
-            <p>Create your MetaLife account</p>
-          </div>
+  <div className="journey-track">
 
-          <div className="journey-step">
-            <h4>Digital Life</h4>
-            <p>Access your personalized space</p>
-          </div>
+    <div className="journey-item">
+      <div className="journey-icon">👤</div>
+      <h4>Sign Up</h4>
+      <p>Create your MetaLife account</p>
+    </div>
 
-          <div className="journey-step">
-            <h4>AI Interaction</h4>
-            <p>Connect with your AI companion</p>
-          </div>
+    <div className="journey-item">
+      <div className="journey-icon">🌐</div>
+      <h4>Digital Life</h4>
+      <p>Access your personalized space</p>
+    </div>
 
-          <div className="journey-step">
-            <h4>Data Marketplace</h4>
-            <p>Trade and monetize your data</p>
-          </div>
+    <div className="journey-item">
+      <div className="journey-icon">🤖</div>
+      <h4>AI Interaction</h4>
+      <p>Connect with your AI companion</p>
+    </div>
 
-          <div className="journey-step">
-            <h4>Earnings</h4>
-            <p>Earn from your digital presence</p>
-          </div>
-        </div>
-      </section>
+    <div className="journey-item">
+      <div className="journey-icon">🗄️</div>
+      <h4>Data Marketplace</h4>
+      <p>Trade and monetize data</p>
+    </div>
+
+    <div className="journey-item">
+      <div className="journey-icon">💰</div>
+      <h4>Earnings</h4>
+      <p>Earn from your digital presence</p>
+    </div>
+
+  </div>
+</section>
 
     </main>
   )

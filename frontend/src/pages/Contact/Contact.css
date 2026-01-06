@@ -1,0 +1,236 @@
+/* PAGE */
+.contact-page {
+    background: #f8fafc;
+    color: #0f172a;
+  }
+  
+  /* HERO */
+  .contact-hero {
+    padding: 200px 10% 150px;
+    text-align: center;
+    background: radial-gradient(circle at top, #1e3a8a, #020617);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .contact-hero::before,
+  .contact-hero::after {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.45;
+    animation: floatGlow 14s infinite alternate ease-in-out;
+  }
+  
+  .contact-hero::before {
+    background: #38bdf8;
+    top: -150px;
+    left: -150px;
+  }
+  
+  .contact-hero::after {
+    background: #8b5cf6;
+    bottom: -150px;
+    right: -150px;
+  }
+  
+  .eyebrow {
+    letter-spacing: 4px;
+    font-size: 13px;
+    color: #7dd3fc;
+  }
+  
+  .contact-hero h1 {
+    font-size: 64px;
+    margin: 20px 0;
+    font-weight: 800;
+  }
+  
+  .contact-hero h1 span {
+    background: linear-gradient(90deg, #38bdf8, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .contact-hero p {
+    max-width: 640px;
+    margin: auto;
+    font-size: 18px;
+    color: #c7d2fe;
+  }
+  
+  /* CONTENT */
+  .contact-content {
+    padding: 120px 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  
+  /* CARD */
+  .contact-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    transition: all 0.35s ease;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+  }
+  
+  .contact-card h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* CHAT */
+  .chat-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+  }
+  
+  .quick-questions button {
+    margin: 6px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    background: #eff6ff;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .quick-questions button:hover {
+    background: #dbeafe;
+  }
+  
+  .chat-box {
+    background: #f1f5f9;
+    padding: 14px;
+    border-radius: 12px;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  
+  .chat-footer {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .chat-footer input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .chat-footer button {
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 0 16px;
+  }
+  
+  .chat-meta span {
+    display: block;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+  
+  /* INFO */
+  .info-box {
+    margin-bottom: 18px;
+  }
+  
+  .socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .socials button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: #f1f5f9;
+    cursor: pointer;
+  }
+  
+  /* FORM */
+  .form-row {
+    display: flex;
+    gap: 14px;
+  }
+  
+  .form-card input,
+  .form-card textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .form-card textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* ANIMATION */
+  @keyframes floatGlow {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-60px);
+    }
+  }
+  
+  /* MOBILE */
+  @media (max-width: 900px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+    }
+  
+    .contact-hero h1 {
+      font-size: 42px;
+    }
+  
+    .form-row {
+      flex-direction: column;
+    }
+  }
+  
